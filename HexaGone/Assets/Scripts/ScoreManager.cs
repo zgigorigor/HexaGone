@@ -22,7 +22,7 @@ public class ScoreManager : MonoBehaviour
 
     public void GameOver()
     {
-        Debug.Log("Game Over!");
+        Debug.Log("Game Over! score manager");
         SceneManager.LoadScene(SceneManager.GetActiveScene( ).name);
     }
 
