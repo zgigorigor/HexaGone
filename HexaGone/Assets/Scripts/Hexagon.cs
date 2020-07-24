@@ -10,6 +10,7 @@ public class Hexagon : MonoBehaviour
 
     public float shrinkSpeed = 3f;
 
+    public int hexaDead = 1;
     
     void Start()
     {
@@ -24,7 +25,9 @@ public class Hexagon : MonoBehaviour
 
         if(transform.localScale.x <= .05f)
         {
+            FindObjectOfType<ScoreManager>().score += hexaDead;
             Destroy(gameObject);
+            Debug.Log(hexaDead);
         }
     }
 }
