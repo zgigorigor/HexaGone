@@ -28,6 +28,6 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
     }
 }

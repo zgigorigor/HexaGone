@@ -27,7 +27,7 @@ public class Hexagon : MonoBehaviour
         {
             FindObjectOfType<ScoreManager>().score += hexaDead;
             Destroy(gameObject);
-            Debug.Log(hexaDead);
+            //Debug.Log(hexaDead);
         }
     }
 }
