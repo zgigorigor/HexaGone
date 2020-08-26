@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 541430641}
   - component: {fileID: 541430640}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: ScoreBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -615,6 +615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e99b9d9e4366a4192c63ae5f24a15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartDelay: 0
 --- !u!4 &710735485
 Transform:
   m_ObjectHideFlags: 0
@@ -642,7 +643,7 @@ GameObject:
   - component: {fileID: 771525115}
   - component: {fileID: 771525114}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
