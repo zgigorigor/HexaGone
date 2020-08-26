@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
         transform.RotateAround(Vector3.zero, Vector3.forward, movement * Time.fixedDeltaTime * -moveSpeed);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         FindObjectOfType<GameManager>().GameOver();
     }

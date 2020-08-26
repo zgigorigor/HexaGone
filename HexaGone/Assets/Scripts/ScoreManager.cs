@@ -16,15 +16,15 @@ public class ScoreManager : MonoBehaviour
         lives -= l;
         if(lives <= 0)
         {
-            GameOver();
+            FindObjectOfType<GameManager>().GameOver();
         }
     }
 
-    public void GameOver()
-    {
-        Debug.Log("Game Over! score manager");
-        SceneManager.LoadScene(SceneManager.GetActiveScene( ).name);
-    }
+    //public void GameOver()
+    //{
+    //    Debug.Log("Game Over! score manager");
+    //    SceneManager.LoadScene(SceneManager.GetActiveScene( ).name);
+    //}
 
     void Update()
     {
