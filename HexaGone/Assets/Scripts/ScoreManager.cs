@@ -47,8 +47,16 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
-        scoreText.text = "Score: " + score.ToString();
-        livesText.text = "Lives: " + lives.ToString();
+        scoreText.text = "SCORE: " + score.ToString();
+        if (lives == 1)
+        {
+            livesText.text = lives.ToString() + " LIFE";
+        }
+        else
+        {
+            livesText.text = lives.ToString() + " LIVES";
+        }
+
         // TODO:
         // prikaz broja života
         
