@@ -403,8 +403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34dc25d6953a5e947a9e80e94284cef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
-  scoreScreenText: {fileID: 0}
 --- !u!1 &394913141
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +416,6 @@ GameObject:
   - component: {fileID: 394913144}
   - component: {fileID: 394913143}
   - component: {fileID: 394913142}
-  - component: {fileID: 394913147}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -540,21 +537,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &394913147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394913141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47a6e211ecd93c43a40c35929d8f904, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lives: 1
-  score: 0
-  scoreText: {fileID: 0}
 --- !u!1 &408178403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,7 +992,6 @@ GameObject:
   m_Component:
   - component: {fileID: 710735485}
   - component: {fileID: 710735486}
-  - component: {fileID: 710735484}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1018,21 +999,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &710735484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 710735483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47a6e211ecd93c43a40c35929d8f904, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lives: 1
-  score: 0
-  scoreText: {fileID: 408178405}
 --- !u!4 &710735485
 Transform:
   m_ObjectHideFlags: 0
@@ -1072,6 +1038,7 @@ GameObject:
   - component: {fileID: 771525116}
   - component: {fileID: 771525115}
   - component: {fileID: 771525114}
+  - component: {fileID: 771525118}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -1159,6 +1126,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &771525118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771525113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47a6e211ecd93c43a40c35929d8f904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 1
+  score: 0
+  scoreText: {fileID: 408178405}
 --- !u!1 &776895605
 GameObject:
   m_ObjectHideFlags: 0
