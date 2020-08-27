@@ -7,26 +7,6 @@ public class GameManager : MonoBehaviour
 {
     public float restartDelay = 1f;
 
-    public static bool GamePaused = false;
-    public GameObject pauseMenuUI;
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (GamePaused)
-            {
-                FindObjectOfType<PauseMenu>().Resume();
-            }
-            else
-            {
-                FindObjectOfType<PauseMenu>().Pause();
-            }
-        }
-    }
-
-
     public void GameOver()
     {
         Debug.Log("Game Over!!!!!!!!!!!");
