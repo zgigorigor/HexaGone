@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Over!!!!!!!!!!!");
         // TODO:
         // pause screen prije restarta na kojem piše final score
+        //FindObjectOfType<MainMenu>().GameOverMenu();
         Invoke("Restart", restartDelay);
     }
 
