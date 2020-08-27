@@ -9,14 +9,13 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        //Time.timeScale = 0f;
         Debug.Log("Game Over!!");
         Invoke("Restart", restartDelay);
     }
 
     void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
 }

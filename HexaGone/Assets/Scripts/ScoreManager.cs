@@ -16,6 +16,7 @@ public class ScoreManager : MonoBehaviour
         lives -= l;
         if(lives <= 0)
         {
+            Debug.Log("Lost all lives");
             FindObjectOfType<GameManager>().GameOver();
         }
     }
