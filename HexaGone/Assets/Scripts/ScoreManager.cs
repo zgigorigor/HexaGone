@@ -12,6 +12,7 @@ public class ScoreManager : MonoBehaviour
     //public int destroyedHexagon;
 
     public Text scoreText;
+    public Text livesText;
     public Text finalScoreText;
 
     public void LoseLife(int l = 1)
@@ -47,7 +48,7 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         scoreText.text = "Score: " + score.ToString();
-
+        livesText.text = "Lives: " + lives.ToString();
         // TODO:
         // prikaz broja života
         
