@@ -8,27 +8,48 @@ public class ScoreManager : MonoBehaviour
 {
     public int lives = 1;
     public int score;
+    public int finalScore;
+    //public int destroyedHexagon;
 
     public Text scoreText;
+    public Text finalScoreText;
 
     public void LoseLife(int l = 1)
     {
         lives -= l;
-        if(lives <= 0)
+        if(lives < 0)
         {
+            Time.timeScale = 0f;
             Debug.Log("Lost all lives");
             FindObjectOfType<GameManager>().GameOver();
+            finalScore = score;
+            Debug.Log("Final score: " + finalScore);
+            //finalScoreText.text = "Your final score is: " + finalScore.ToString();
         }
     }
 
-    //public void GameOver()
+    // TODO:
+    // dodavanje života za svakih 10 bodova
+    //
+    //public void GainLife()
     //{
-    //    Debug.Log("Game Over! score manager");
-    //    SceneManager.LoadScene(SceneManager.GetActiveScene( ).name);
+    //    // dodati život
+    //    Debug.Log("destroyed hexangos: " + destroyedHexagon);
+    //    if (destroyedHexagon >= 10)
+    //    {
+    //        Debug.Log("extra life added!");
+    //        FindObjectOfType<Hexagon>().destroyedHexa = 0;
+    //    }
+    //    // ispisati poruku da je dobio život
+    //    Debug.Log("You've earned another life!");
     //}
 
     void Update()
     {
         scoreText.text = "Score: " + score.ToString();
+
+        // TODO:
+        // prikaz broja života
+        
     }
 }

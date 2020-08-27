@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float moveSpeed = 600f;
+    public float moveSpeed = 400f;
 
     float movement = 0f;
 
@@ -22,6 +22,6 @@ public class Player : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        FindObjectOfType<GameManager>().GameOver();
+        FindObjectOfType<ScoreManager>().LoseLife();
     }
 }

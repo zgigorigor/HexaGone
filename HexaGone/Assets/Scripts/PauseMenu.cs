@@ -9,20 +9,20 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (GamePaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
-        }
-    }
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Escape))
+    //    {
+    //        if (GamePaused)
+    //        {
+    //            Resume();
+    //        }
+    //        else
+    //        {
+    //            Pause();
+    //        }
+    //    }
+    //}
 
     public void Resume()
     {
@@ -31,22 +31,27 @@ public class PauseMenu : MonoBehaviour
         GamePaused = false;
     }
 
-    void Pause()
+    public void Pause()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GamePaused = true;
     }
 
+    // TODO:
+    // pauza: resume button
+    // game over: restart game button, back to menu button, quit game button
+
+
     public void ToMainMenu()
     {
         Debug.Log("to main menu");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -1);
     }
 
     public void QuitGame()
     {
         Debug.Log("Quitting game...");
-        Application.Quit();
+        //Application.Quit();
     }
 }

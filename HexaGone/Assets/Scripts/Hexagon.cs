@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class Hexagon : MonoBehaviour
 {
-
     public Rigidbody2D rb;
 
     public float shrinkSpeed = 3f;
 
     public int hexaDead = 1;
+    //public int destroyedHexa = 1;
     
     void Start()
     {
@@ -27,7 +27,7 @@ public class Hexagon : MonoBehaviour
         {
             FindObjectOfType<ScoreManager>().score += hexaDead;
             Destroy(gameObject);
-            //Debug.Log(hexaDead);
+            //FindObjectOfType<ScoreManager>().destroyedHexagon += hexaDead;
         }
     }
 }
