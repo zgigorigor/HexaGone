@@ -9,10 +9,13 @@ public class Player : MonoBehaviour
 
     float movement = 0f;
 
+    public Joystick joystick;
+
     // Update is called once per frame
     void Update()
     {
-        movement = Input.GetAxisRaw("Horizontal");
+        //movement = Input.GetAxisRaw("Horizontal");
+        movement = joystick.Horizontal;
     }
 
     private void FixedUpdate()
