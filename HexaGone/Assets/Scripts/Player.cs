@@ -6,16 +6,19 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float moveSpeed = 400f;
-
     float movement = 0f;
+    public bool moveRight;
+    public bool moveLeft;
 
     public Joystick joystick;
 
     // Update is called once per frame
     void Update()
     {
-        //movement = Input.GetAxisRaw("Horizontal");
-        movement = joystick.Horizontal;
+        //movement = joystick.Horizontal;
+        movement = Input.GetAxisRaw("Horizontal");
+        HandleMovement();
+
     }
 
     private void FixedUpdate()
