@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float moveSpeed = 400f;
     float movement = 0f;
+    public float moveSpeed = 400f;
     public bool moveRight;
     public bool moveLeft;
 
@@ -15,11 +15,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //movement = joystick.Horizontal;
-        movement = Input.GetAxisRaw("Horizontal");
-        HandleMovement();
+        movement = KeyboardMovement();
+        //movement = JoystickMovement();
 
     }
+
+    private static float KeyboardMovement() => Input.GetAxisRaw("Horizontal");
+
+    private float JoystickMovement() => joystick.Horizontal;
 
     private void FixedUpdate()
     {
