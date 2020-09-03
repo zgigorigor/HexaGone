@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
 {
     float movement = 0f;
     public float moveSpeed = 400f;
-    public bool moveRight;
-    public bool moveLeft;
+    private bool moveRight;
+    private bool moveLeft;
 
     public Joystick joystick;
 
@@ -17,12 +17,38 @@ public class Player : MonoBehaviour
     {
         movement = KeyboardMovement();
         //movement = JoystickMovement();
-
+        //movement = ButtonMovement();
+        //ButtonMovement();
     }
+
+    //public void LeftButtonDown()
+    //{
+    //    moveLeft = true;
+    //    Debug.Log("button down");
+    //}
+    //public void LeftButtonUp()
+    //{
+    //    moveLeft = false;
+    //}
+    //public bool RightButtonDown() => moveRight = true;
+    //public bool RightButtonUp() => moveRight = false;
 
     private static float KeyboardMovement() => Input.GetAxisRaw("Horizontal");
 
-    private float JoystickMovement() => joystick.Horizontal;
+    //private float JoystickMovement() => joystick.Horizontal;
+
+    //public void ButtonMovement()
+    //{
+    //    if (moveLeft)
+    //    {
+    //        movement = - moveSpeed;
+    //        Debug.Log("checked movement to left");
+    //    }
+    //    else if (moveRight)
+    //    {
+    //        movement = moveSpeed;
+    //    }
+    //}
 
     private void FixedUpdate()
     {
