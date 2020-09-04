@@ -18,7 +18,7 @@ public class ScoreManager : MonoBehaviour
     public void LoseLife(int l = 1)
     {
         lives -= l;
-        if(lives < 0)
+        if(lives <= 0)
         {
             Time.timeScale = 0f;
             Debug.Log("Lost all lives");
@@ -47,15 +47,17 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
-        scoreText.text = "SCORE: " + score.ToString();
-        if (lives == 1)
-        {
-            livesText.text = lives.ToString() + " LIFE";
-        }
-        else
-        {
-            livesText.text = lives.ToString() + " LIVES";
-        }
+        scoreText.text = score.ToString();
+        livesText.text = lives.ToString();
+        //scoreText.text = "SCORE: " + score.ToString();
+        //if (lives == 1)
+        //{
+        //    livesText.text = lives.ToString() + " LIFE";
+        //}
+        //else
+        //{
+        //    livesText.text = lives.ToString() + " LIVES";
+        //}
 
         // TODO:
         // prikaz broja života

@@ -7,10 +7,10 @@ public class Player : MonoBehaviour
 {
     float movement = 0f;
     public float moveSpeed = 400f;
-    private bool moveRight;
-    private bool moveLeft;
+    //private bool moveRight;
+    //private bool moveLeft;
 
-    public Joystick joystick;
+    //public Joystick joystick;
 
     // Update is called once per frame
     void Update()
@@ -59,4 +59,6 @@ public class Player : MonoBehaviour
     {
         FindObjectOfType<ScoreManager>().LoseLife();
     }
+
+    
 }
