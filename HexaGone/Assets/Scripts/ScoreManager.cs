@@ -22,7 +22,8 @@ public class ScoreManager : MonoBehaviour
         {
             Time.timeScale = 0f;
             Debug.Log("Lost all lives");
-            FindObjectOfType<GameManager>().GameOver();
+            //FindObjectOfType<GameManager>().GameOver();
+            FindObjectOfType<GameOverMenu>().GameOverScreen();
             finalScore = score;
             Debug.Log("Final score: " + finalScore);
             //finalScoreText.text = "Your final score is: " + finalScore.ToString();

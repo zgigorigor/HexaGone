@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public float restartDelay = 1f;
 
+
     public void GameOver()
     {
         Debug.Log("Game Over!!!!!!!!!!!");
@@ -16,9 +17,8 @@ public class GameManager : MonoBehaviour
         Invoke("Restart", restartDelay);
     }
 
-    void Restart()
+    public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
-
 }
