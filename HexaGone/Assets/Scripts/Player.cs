@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    float movement = 0f;
-    public float moveSpeed = 400f;
+    float movement;
+    public float moveSpeed = GameManager.MoveSpeed;
     //private bool moveRight;
     //private bool moveLeft;
 

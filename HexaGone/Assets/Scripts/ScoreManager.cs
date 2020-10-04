@@ -6,50 +6,60 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public int lives = 1;
+    public int lives = GameManager.Lives;
     public int score;
-    public int finalScore;
-    //public int destroyedHexagon;
+    int destroyedHexa;
+    public static int finalScore;
 
     public Text scoreText;
     public Text livesText;
     public Text finalScoreText;
 
-    public void LoseLife(int l = 1)
+    public int LoseLife(int l = 1, int s = 1)
     {
         lives -= l;
-        if(lives <= 0)
+        score -= s;
+        return lives;
+    }
+
+    public void GainingLife()
+    {
+        destroyedHexa += 1;
+        if ( destroyedHexa >= 10 )
         {
-            Time.timeScale = 0f;
-            Debug.Log("Lost all lives");
-            //FindObjectOfType<GameManager>().GameOver();
-            FindObjectOfType<GameOverMenu>().GameOverScreen();
-            finalScore = score;
-            Debug.Log("Final score: " + finalScore);
-            //finalScoreText.text = "Your final score is: " + finalScore.ToString();
+            GetLife();
+            destroyedHexa = 0;
         }
     }
 
-    // TODO:
-    // dodavanje života za svakih 10 bodova
-    //
-    //public void GainLife()
-    //{
-    //    // dodati život
-    //    Debug.Log("destroyed hexangos: " + destroyedHexagon);
-    //    if (destroyedHexagon >= 10)
-    //    {
-    //        Debug.Log("extra life added!");
-    //        FindObjectOfType<Hexagon>().destroyedHexa = 0;
-    //    }
-    //    // ispisati poruku da je dobio život
-    //    Debug.Log("You've earned another life!");
-    //}
+    public int GetLife(int l = 1)
+    {
+        lives += l;
+        return lives;
+    }
+
+    public void CheckLife()
+    {
+        if(lives <= 0)
+        {
+            Time.timeScale = 0f;
+            FinalScore();
+            FindObjectOfType<GameManager>().GameOver();
+        }
+    }
+
+    public int FinalScore()
+    {
+        finalScore = score;
+        return finalScore;
+    }
 
     void Update()
     {
+        CheckLife();
         scoreText.text = score.ToString();
         livesText.text = lives.ToString();
+        //FinalScore();
         //scoreText.text = "SCORE: " + score.ToString();
         //if (lives == 1)
         //{
@@ -64,4 +74,5 @@ public class ScoreManager : MonoBehaviour
         // prikaz broja života
         
     }
+
 }

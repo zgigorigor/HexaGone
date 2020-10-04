@@ -6,15 +6,17 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public float restartDelay = 1f;
+    public static float MoveSpeed = 500f;
+    public static int Lives = 3;
 
 
     public void GameOver()
     {
-        Debug.Log("Game Over!!!!!!!!!!!");
         // TODO:
         // pause screen prije restarta na kojem piše final score
-        //FindObjectOfType<MainMenu>().GameOverMenu();
-        Invoke("Restart", restartDelay);
+        //Invoke("Restart", restartDelay);
+        //Debug.Log("Game Over!!!!!!!!!!!");
+        FindObjectOfType<GameOverMenu>().GameOverScreen();
     }
 
     public void Restart()
