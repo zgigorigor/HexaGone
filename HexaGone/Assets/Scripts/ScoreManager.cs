@@ -18,7 +18,7 @@ public class ScoreManager : MonoBehaviour
     public int LoseLife(int l = 1, int s = 1)
     {
         lives -= l;
-        score -= s;
+        //score -= s;
         return lives;
     }
 

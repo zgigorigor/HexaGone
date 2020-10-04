@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour
 {
-    public static bool GamePause = false;
+    public bool GamePause = GameManager.GamePaused;
     public GameObject gameOverUI;
     public Text finalScoreText;
     public Text finalScoreMessage;
@@ -42,6 +43,8 @@ public class GameOverMenu : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex - 1 );
+        //GamePause = false;
         Debug.Log("from GOM: back to main menu");
     }
 }

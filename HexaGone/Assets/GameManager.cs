@@ -8,7 +8,16 @@ public class GameManager : MonoBehaviour
     public float restartDelay = 1f;
     public static float MoveSpeed = 500f;
     public static int Lives = 3;
-
+    public static bool GamePaused = false;
+    
+    void Start()
+    {
+        if ( GamePaused == true )
+        {
+            GamePaused = false;
+            Restart();
+        }
+    }
 
     public void GameOver()
     {
