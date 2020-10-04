@@ -15,10 +15,4 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quit game!");
         Application.Quit();
     }
-
-    public void GameOverMenu()
-    {
-        Debug.Log("Game over menu activated");
-        //SceneManager.LoadScene(SceneManager.GetSceneByName(GameOverMenu).buildIndex);
-    }
 }
